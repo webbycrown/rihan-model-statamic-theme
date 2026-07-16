@@ -13,10 +13,10 @@ fields:
               display: 'Hero Section'
               fields:
                 -
-                  handle: heading
+                  handle: headings
                   field:
                     type: replicator
-                    display: Heading
+                    display: Headings
                     sets:
                       new_set_group:
                         display: 'New Set Group'
