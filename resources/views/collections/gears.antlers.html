@@ -3,7 +3,7 @@
         <div
             class="grid 1xl:grid-cols-4 md:grid-cols-3 grid-cols-2 max-[420px]:grid-cols-1 1xl:gap-12 gap-8 xl:mb-14 mb-8 gears-wrapper">
             {{ collection:gears sort="date:asc" }}
-                <div class="gear-item relative group
+                <div class="block-items relative group
                         sm:drop-shadow-[15px_15px_4px_rgba(0,0,0,0.30)]
                         drop-shadow-[10px_10px_3px_rgba(0,0,0,0.30)]">
                     <div class="absolute left-0 top-0 w-full h-full lg:p-6 p-4">
@@ -20,12 +20,13 @@
                 </div>
             {{ /collection:gears }}
         </div>
+
         <div class="flex items-center justify-center lg:mt-8 mt-6">
-            <div class="gears-initial-items" data-limit="{{ gear_settings:initial_items }}"></div>
+            <div class="gears-initial-items initial-items" data-limit="{{ gear_settings:initial_items }}"></div>
             <a href="javascript:;" class="all-btn flex items-center justify-center gap-2">
-                Load MORE
+                <span class="btn-text">Load MORE</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="animate-spin	">
+                    class="hidden animate-spin	">
                     <path
                         d="M14.0625 2.96356C12.5135 2.06926 10.7128 1.71106 8.93946 1.94453C7.16616 2.17799 5.51946 2.99007 4.25473 4.25481C2.99001 5.51954 2.17795 7.16626 1.94451 8.93956C1.71107 10.7129 2.06929 12.5136 2.96361 14.0626C3.85793 15.6116 5.23837 16.8221 6.89083 17.5066C8.54329 18.191 10.3754 18.3111 12.1031 17.8481C13.8307 17.3852 15.3573 16.3651 16.4461 14.9461C17.5349 13.527 18.1251 11.7884 18.125 9.99981"
                         stroke="currentcolor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>

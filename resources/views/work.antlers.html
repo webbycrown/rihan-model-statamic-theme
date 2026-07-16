@@ -1,4 +1,3 @@
-
 <!-- start main wrapper -->
 <div class="main-wrapper">
     <!-- start hero section -->
@@ -11,52 +10,19 @@
                 {{ partial:collections/work }}
             </div>
             <div class="flex items-center justify-center lg:mt-8 mt-6">
-                <a href="javascript:;" class="all-btn flex items-center justify-center gap-2">Load MORE
+                <a href="javascript:;" class="all-btn flex items-center justify-center gap-2">
+                    <span class="btn-text">Load MORE</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="animate-spin	">
+                        class="hidden animate-spin">
                         <path
                             d="M14.0625 2.96356C12.5135 2.06926 10.7128 1.71106 8.93946 1.94453C7.16616 2.17799 5.51946 2.99007 4.25473 4.25481C2.99001 5.51954 2.17795 7.16626 1.94451 8.93956C1.71107 10.7129 2.06929 12.5136 2.96361 14.0626C3.85793 15.6116 5.23837 16.8221 6.89083 17.5066C8.54329 18.191 10.3754 18.3111 12.1031 17.8481C13.8307 17.3852 15.3573 16.3651 16.4461 14.9461C17.5349 13.527 18.1251 11.7884 18.125 9.99981"
                             stroke="currentcolor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </a>
-                <div class="works-initial-items" data-limit="{{ work_settings:initial_items }}"></div>
+                <div class="works-initial-items initial-items" data-limit="{{ work_settings:initial_items }}"></div>
             </div>
         </div>
     </section>
     <!-- end gears section -->
 </div>
 
-
-{{ push:scripts }}
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let wrapper = document.querySelector('.works-initial-items');
-            if (!wrapper) return;
-            let limit = parseInt(wrapper.dataset.limit); // initial/load more count
-            let items = document.querySelectorAll('.work-block');
-            let loadMoreBtn = document.querySelector('.all-btn');
-            let currentIndex = limit;
-            // Initially hide items after first limit
-            items.forEach((item, index) => {
-                if (index >= limit) {
-                    item.style.display = "none";
-                }
-            });
-
-            // Load more button click
-            loadMoreBtn?.addEventListener('click', function() {
-                let nextItems = Array.from(items).slice(currentIndex, currentIndex + limit);
-                nextItems.forEach(item => {
-                    item.style.display = "block";
-                });
-                currentIndex += limit;
-
-                // Hide button when all items are visible
-                if (currentIndex >= items.length) {
-                    this.style.display = "none";
-                }
-            });
-        });
-    </script>
-{{ /push:scripts }}

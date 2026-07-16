@@ -1,0 +1,11 @@
+your_name: 'Kerry Dunlap'
+company: 'Mcgee Shepherd Inc'
+email_address: kiwym@mailinator.com
+phone_number: '9874563210'
+role:
+  - movie_role
+  - tv_serial_role
+  - magazine_ad
+  - event_management
+budget: 'Quo qui et inventore'
+brief_enquiry: 'Est deleniti commodo'

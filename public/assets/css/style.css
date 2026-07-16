@@ -2275,10 +2275,10 @@ input[type="checkbox"]:before {
 
 @font-face {
     font-family: 'Inconsolata';
-    src: url('../fonts/Inconsolata-semibold.eot');
-    src: url('../fonts/Inconsolata-semibold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Inconsolata-semibold.woff2') format('woff2'),
-        url('../fonts/Inconsolata-semibold.woff') format('woff');
+    src: url('../fonts/Inconsolata-SemiBold.eot');
+    src: url('../fonts/Inconsolata-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inconsolata-SemiBold.woff2') format('woff2'),
+        url('../fonts/Inconsolata-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -3426,6 +3426,7 @@ input[type="checkbox"]:before {
     from {
         clip-path: inset(100% 0 0 0);
     }
+
     to {
         clip-path: inset(0 0 0 0);
     }
