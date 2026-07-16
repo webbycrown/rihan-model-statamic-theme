@@ -1,0 +1,163 @@
+title: 'Home Page Sections'
+fields:
+  -
+    handle: sections
+    field:
+      type: replicator
+      display: Sections
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            hero_section:
+              display: 'Hero Section'
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: replicator
+                    display: Heading
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          first_heading:
+                            display: 'First Heading'
+                            fields:
+                              -
+                                handle: heading
+                                field:
+                                  type: text
+                                  display: Heading
+                          second_heading:
+                            display: 'Second Heading'
+                            fields:
+                              -
+                                handle: second_heading
+                                field:
+                                  type: text
+                                  display: Heading
+                -
+                  handle: paragraphs
+                  field:
+                    type: replicator
+                    display: Paragraphs
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          new_set:
+                            display: 'New Set'
+                            fields:
+                              -
+                                handle: paragraph
+                                field:
+                                  type: textarea
+                                  display: paragraph
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: 'Button Label'
+                -
+                  handle: background_image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Background Image'
+                -
+                  handle: button_image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Button Image'
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: 'Button Url'
+            work:
+              display: Work
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: work_collection
+                  field:
+                    mode: select
+                    collections:
+                      - works
+                    type: entries
+                    display: 'Work Collection'
+                    max_items: 5
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: 'Button Label'
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: 'Button Url'
+            press:
+              display: Press
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: press_collection
+                  field:
+                    mode: select
+                    collections:
+                      - press
+                    type: entries
+                    display: 'Press Collection'
+                    max_items: 6
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: 'Button Label'
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: 'Button Url'
+            books:
+              display: Books
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: book_collection
+                  field:
+                    mode: select
+                    collections:
+                      - gears
+                    type: entries
+                    display: 'Book Collection'
+                    max_items: 12
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: 'Button Label'
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: 'Button Url'

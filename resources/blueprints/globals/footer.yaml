@@ -1,0 +1,26 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: copyright_text
+            field:
+              type: text
+              display: 'Copyright Text'
+          -
+            handle: company_name
+            field:
+              type: text
+              display: 'Company Name'
+          -
+            handle: company_url
+            field:
+              type: link
+              display: 'Company URL'
+          -
+            handle: copyright_year
+            field:
+              type: text
+              display: 'Copyright Year'

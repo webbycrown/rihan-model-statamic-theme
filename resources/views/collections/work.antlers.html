@@ -1,0 +1,12 @@
+{{ collection:works }}
+    <div class="group work-block">
+        <a href="{{ url }}" class="block">
+            {{ image }}
+                <img src="{{ url }}" alt="img" class="group-hover:grayscale transition-all" />
+            {{ /image }}
+            <h2 class="2xl:text-3xl lg:text-2xl text-xl text-black uppercase text-center mt-4 lg:mb-3 mb-1">
+                {{ title }}
+            </h2>
+        </a>
+    </div>
+{{ /collection:works }}

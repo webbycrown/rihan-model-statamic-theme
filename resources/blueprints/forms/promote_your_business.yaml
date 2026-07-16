@@ -1,0 +1,67 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: your_name
+            field:
+              placeholder: 'Your Name'
+              type: text
+              display: Name
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              placeholder: 'Email Address'
+              type: text
+              display: Email
+              validate:
+                - required
+                - email
+          -
+            handle: phone_number
+            field:
+              placeholder: 'Phone Number'
+              type: integer
+              display: 'Phone Number'
+          -
+            handle: city
+            field:
+              placeholder: City
+              type: text
+              display: City
+              validate:
+                - required
+          -
+            handle: product_description
+            field:
+              placeholder: 'Product description'
+              type: textarea
+              display: 'Product description'
+              validate:
+                - required
+          -
+            handle: description
+            field:
+              options:
+                -
+                  key: '#'
+                  value: 'How Do you Want?'
+                -
+                  key: Massa
+                  value: 'Massa placerat duis'
+                -
+                  key: Sodales
+                  value: 'Sodales neque sodales ut etiam'
+                -
+                  key: Vitae
+                  value: 'Vitae tempus quam pellentesque nec nam'
+              placeholder: 'How Do you Want?'
+              default: 'How Do you Want?'
+              type: select
+              display: Description
+              validate:
+                - required

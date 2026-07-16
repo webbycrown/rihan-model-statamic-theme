@@ -1,0 +1,36 @@
+title: 'Gears Section'
+fields:
+  -
+    handle: gears_title
+    field:
+      type: text
+      display: 'Gears Title'
+  -
+    handle: initial_items
+    field:
+      type: integer
+      display: 'Initial Items'
+      default: 8
+  -
+    handle: gears_items
+    field:
+      type: grid
+      display: 'Gears Items'
+      fields:
+        -
+          handle: image
+          field:
+            container: assets
+            type: assets
+            display: Image
+            max_files: 1
+        -
+          handle: title
+          field:
+            type: text
+            display: Title
+        -
+          handle: link
+          field:
+            type: link
+            display: Link

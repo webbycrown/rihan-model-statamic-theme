@@ -1,0 +1,44 @@
+title: 'Instagram Section'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: user_name
+    field:
+      type: text
+      display: 'User Name'
+  -
+    handle: url
+    field:
+      type: link
+      display: Url
+  -
+    handle: instagram_img
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: 'Instagram Img'
+  -
+    handle: grid_images
+    field:
+      type: grid
+      display: 'Grid images'
+      fields:
+        -
+          handle: image
+          field:
+            min_files: 1
+            container: assets
+            type: assets
+            display: Image
+            max_files: 1
+        -
+          handle: image_url
+          field:
+            type: link
+            display: 'Image Url'

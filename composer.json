@@ -1,0 +1,13 @@
+{
+  "name": "webbycrown/rihan-model-statamic-theme",
+  "type": "statamic-starter-kit",
+  "description": "A Statamic starter kit for information sites.",
+  "require": {
+    "statamic/cms": "*"
+  },
+  "extra": {
+    "statamic": {
+      "starter-kit": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: initial_items
+            field:
+              type: text
+              display: 'Initial Items'

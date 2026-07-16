@@ -1,0 +1,61 @@
+title: 'All Page Builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: 'Page Builder'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            button:
+              display: Button
+              fields:
+                -
+                  import: button
+            block_title_content_and_url:
+              display: 'Block Title,Content And Url'
+              fields:
+                -
+                  import: block_title_content_and_url
+            hero_section:
+              display: 'Hero Section'
+              fields:
+                -
+                  import: hero_section
+            about_page_section:
+              display: 'About Page Section'
+              fields:
+                -
+                  import: about_page_section
+            about_page_gallery_section:
+              display: 'About Page Gallery Section'
+              fields:
+                -
+                  import: about_page_gallery_section
+            block_title_and_content:
+              display: 'Block Title And Content'
+              fields:
+                -
+                  import: block_title_and_content
+            instagram_section:
+              display: 'Instagram Section'
+              fields:
+                -
+                  import: instagram_section
+            gears_section:
+              display: 'Gears Section'
+              fields:
+                -
+                  import: gears_section
+            sections:
+              display: Sections
+              fields:
+                -
+                  import: sections
+            home_page_sections:
+              display: 'Home Page Sections'
+              fields:
+                -
+                  import: home_page_sections

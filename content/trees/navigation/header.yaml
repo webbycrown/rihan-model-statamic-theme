@@ -1,0 +1,25 @@
+tree:
+  -
+    id: bc28fdba-606b-47e7-8f50-b955ea8efcd3
+    title: About
+    url: /about
+  -
+    id: 38dc7d31-c280-4786-851b-c91bb6509620
+    title: Book
+    url: /book
+  -
+    id: 74b381bf-4a92-4132-8a9e-b2b4e4bb4782
+    title: 'My Gear'
+    url: /my-gear
+  -
+    id: 0448ee0c-386b-4d3f-941e-09e282feb96f
+    title: Work
+    url: /work
+  -
+    id: bd992c93-e09e-4708-823c-d59a3c024301
+    title: Press
+    url: /press
+  -
+    id: 9d31e020-275e-4771-bdc2-be8d1921e8a7
+    title: Contact
+    url: /contact

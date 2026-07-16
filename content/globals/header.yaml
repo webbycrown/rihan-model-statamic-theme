@@ -1,0 +1,31 @@
+title: Header
+data:
+  header_logo: img/white-logo.svg
+  social_fa_icons:
+    -
+      id: mree6vee
+      icon_title: Instagram
+      icon_list: instagram
+      icon_class: fa-instagram
+    -
+      id: mreedckz
+      icon_title: Artstation
+      icon_class: fa-artstation
+      icon_list: artstation
+    -
+      id: mree89mz
+      icon_title: Twitter
+      icon_list: twitter
+      icon_class: fa-twitter
+    -
+      id: mreea40z
+      icon_title: Linkedin
+      icon_class: fa-linkedin
+      icon_list: linkedin
+    -
+      id: mreeaj7v
+      icon_title: Envelop
+      icon_class: fa-envelope-o
+      icon_list: envelope
+  button_label: 'Work with us'
+  button_url: /work-with-us

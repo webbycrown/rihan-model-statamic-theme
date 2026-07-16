@@ -1,0 +1,51 @@
+<!-- footer -->
+<footer class="footer-part relative overflow-hidden">
+    <!-- container -->
+    <div class="bg-black relative z-1 ">
+        <div class="container">
+            <div class="flex justify-between items-center sm:flex-row flex-col gap-3 2xl:py-12 md:py-10 py-6">
+                <div class="1xl:text-left text-center">
+                    <a href="{{ logo:url }}"> <img src="{{ logo:light_logo }}" alt="img"
+                            class="max-w-[150px] xl:max-w-full 1xl:mx-0 mx-auto"></a>
+                </div>
+                <div class=" 1xl:text-left text-center ">
+                    <ul class="flex items-center md:gap-6 gap-3 justify-end">
+                        {{ social_icons:social_fa_icons }}
+                            <li>
+                                <a href="{{ icon_url ?? 'javascript:;' }}">
+                                    <i class=" text-white xl:w-6 w-5 hover:opacity-60 transition-all text-2xl
+                                {{ if icon_list == 'phone' || icon_list == 'envelope' }}
+                                    fa-solid
+                                {{ else }}
+                                    fa-brands
+                                {{ /if }}
+                                fa-{{ icon_list }}">
+                                    </i>
+                                </a>
+                            </li>
+                        {{ /social_icons:social_fa_icons }}
+                    </ul>
+                </div>
+
+            </div>
+            <div
+                class=" flex items-center md:justify-between justify-center md:flex-nowrap flex-wrap gap-3 w-full border-t border-white/30  py-6">
+                <p class="text-white 1xl:text-lg text-md mb-0 1xl:text-left text-center">© Copyright
+                    {{ footer:company_year }} <a class="underline"
+                        href="{{ footer:company_url }}">{{ footer:company_name }}</a>
+                    {{ footer:copyright_text }}
+                </p>
+
+                <div>
+                    <ul class="text-white 1xl:text-lg text-md font-normal flex items-center xl:gap-8 gap-4">
+                        {{ nav:footer_menu }}
+                            <li>
+                                <a href="{{ url }}" class="hover:underline">{{ title }}</a>
+                            </li>
+                        {{ /nav:footer_menu }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

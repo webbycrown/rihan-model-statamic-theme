@@ -1,0 +1,54 @@
+title: 'Social Icon Section'
+fields:
+  -
+    handle: social_fa_icons
+    field:
+      type: grid
+      display: Social_fa_icons
+      fields:
+        -
+          handle: icon_list
+          field:
+            type: select
+            display: 'Icon List'
+            options:
+              -
+                key: twitter
+                value: Twitter
+              -
+                key: facebook
+                value: Facebook
+              -
+                key: instagram
+                value: Instagram
+              -
+                key: dribbble
+                value: Dribbble
+              -
+                key: github
+                value: GitHub
+              -
+                key: 500px
+                value: 500px
+              -
+                key: phone
+                value: Phone
+              -
+                key: envelope
+                value: Email
+              -
+                key: linkedin
+                value: LinkedIn
+              -
+                key: artstation
+                value: Artstation
+        -
+          handle: icon_url
+          field:
+            type: link
+            display: 'Icon Url'
+        -
+          handle: icon_class
+          field:
+            type: text
+            display: 'Icon Class'

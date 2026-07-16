@@ -1,0 +1,84 @@
+<div class="main-wrapper">
+
+    <!-- start hero section -->
+    {{ partial:page_builder/hero_section }}
+    <!-- end hero section -->
+
+    <!-- start gears section -->
+
+    <section class="2xl:py-24 1xl:py-20 lg:py-16 py-14">
+        <div class="container">
+            <div class="flex items-center lg:justify-between justify-center lg:flex-nowrap flex-wrap  gap-2 ">
+                <ul class="tabs-list flex lg:gap-4 gap-2 lg:flex-nowrap flex-wrap lg:justify-start justify-center">
+                    <li data-tab="all" class="all-btn tab-link cursor-pointer current 1xl:px-8 px-6">All</li>
+                    {{ collection:gear_categories sort="date:asc" }}
+                        <li data-tab="{{ slug }}" class="all-btn tab-link cursor-pointer 1xl:px-8 px-6">
+                            {{ title }}
+                        </li>
+                    {{ /collection:gear_categories }}
+                </ul>
+                <a class="all-btn promote-bus-form" href="#promote-business">promote your
+                    business</a>
+            </div>
+
+            {{ partial:collections/gear-products }}
+            <!-- form itself -->
+            {{ form:promote_your_business method="POST" action="{route:promote_your_business.submit}" id="promote-business" attr:novalidate="novalidate" class="mfp-hide white-popup-block bg-primary-800 max-w-[600px] mx-auto xl:p-8 p-4 relative m-6" }}
+                {{ csrf }}
+                <h3 class="uppercase mb-7">{{ promote_your_business_form_settings:form_title }}</h3>
+                {{ fields }}
+                    {{ if type == 'select' }}
+                        <select name="{{ handle }}" id="{{ handle }}" class="input-field">
+                            {{ foreach:options as="option|label" }}
+                                <option value="{{ option }}" {{ if value == option }}selected{{ /if }}>
+                                    {{ label }}
+                                </option>
+                            {{ /foreach:options }}
+                        </select>
+                        <small class="field-error text-danger" data-error-for="{{ handle }}">
+                        </small>
+                    {{ elseif type=='textarea' }}
+                        <textarea name="{{ handle }}" id="{{ handle }}" class="input-field"
+                            placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}" rows="1"
+                            style="overflow: hidden; resize: none; height: 79px;"></textarea>
+                        <small class="field-error text-danger" data-error-for="{{ handle }}">
+                        </small>
+                    {{ else }}
+                        <input id="{{ id }}" type="{{ type }}" name="{{ handle }}" id="{{ handle }}"
+                            class="input-field"
+                            placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}">
+                        <small class="field-error text-danger" data-error-for="{{ handle }}">
+                        </small>
+                    {{ /if }}
+                {{ /fields }}
+                <button type="submit"
+                    class="btn-primary mt-6">{{ promote_your_business_form_settings:button_label }}</button>
+
+                <button title="Close (Esc)" class="mfp-close !flex items-center justify-center" type="button">
+                    <svg width="16" height="16" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="pointer-events-none lg:w-5 w-4 ">
+                        <path
+                            d="M1.33133 18.6991L0.298828 17.6666L8.46549 9.49995L0.298828 1.33328L1.33133 0.300781L9.49799 8.46745L17.6647 0.300781L18.6972 1.33328L10.5305 9.49995L18.6972 17.6666L17.6647 18.6991L9.49799 10.5324L1.33133 18.6991Z"
+                            fill="black" />
+                    </svg>
+                </button>
+                <div id="form-success" class="hidden bg-green-100 text-green-700 p-3 mb-4">
+                </div>
+            {{ /form:promote_your_business }}
+        </div>
+    </section>
+    <!-- end gears section -->
+
+</div>
+
+{{ push:scripts }}
+    <script>
+        $(document).on('click', '.tab-link', function() {
+            const tab = $(this).data('tab');
+            if (tab == 'all') {
+                $(document).find('.tabs-content').addClass('current');
+            }
+        })
+    </script>
+    <script src="{{ theme:asset src="assets/js/promote-business-form.js" }}"></script>
+{{ /push:scripts }}

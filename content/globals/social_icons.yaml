@@ -1,0 +1,33 @@
+title: 'Social Icons'
+data:
+  social_fa_icons:
+    -
+      id: mrj15hlm
+      icon_title: Instagram
+      icon_list: instagram
+      icon_class: fa-instagram
+      icon_url: 'https://www.instagram.com'
+    -
+      id: mrj17w6u
+      icon_title: Artstation
+      icon_list: artstation
+      icon_class: fa-artstation
+      icon_url: 'https://www.artstation.com'
+    -
+      id: mrj187w8
+      icon_title: Twitter
+      icon_list: twitter
+      icon_class: fa-x-twitter
+      icon_url: 'https://www.twitter.com'
+    -
+      id: mrj18d7y
+      icon_title: Linkedin
+      icon_list: linkedin
+      icon_class: fa-linkedin-in
+      icon_url: 'https://www.linkedin.com'
+    -
+      id: mrj18llc
+      icon_title: Email
+      icon_list: envelope
+      icon_class: fa-envelope
+      icon_url: 'mailto:info@webbycrown.com'

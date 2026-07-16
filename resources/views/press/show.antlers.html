@@ -1,0 +1,124 @@
+<!-- start main wrapper -->
+<div class="main-wrapper">
+
+    <!-- start hero section -->
+    {{ partial:page_builder/hero_section }}
+    <!-- end hero section -->
+
+    <!-- start gears section -->
+    <section class="2xl:py-24 1xl:py-20 lg:py-16 py-14">
+        <div class="container">
+            <div class="flex 1xl:gap-14 gap-10 xl:flex-row flex-col">
+                <div class="xl:w-3/5 w-full">
+                    {{# thumb image #}}
+                    {{ if type == press_details }}
+                        {{ thumb_image }}
+                            <img src="{{ url }}">
+                        {{ /thumb_image }}
+                    {{ /if }}
+                    {{# intro section #}}
+                    {{ if type == intro_section }}
+                        <h2
+                            class="uppercase 1xl:text-4xl lg:text-3xl text-2xl md:mb-5 mb-3.5 border-t border-gray-100 md:pt-8 pt-5 md:mt-8 mt-5">
+                            {{ intro_title }}
+                        </h2>
+                        {{ intro_description }}
+                            <p class="text-gray-400 lg:text-lg text-md">{{ paragraph }}</p>
+                        {{ /intro_description }}
+                    {{ /if }}
+                    {{# qoute section #}}
+                    {{ if type == quote_section }}
+                        <h2 class="uppercase 1xl:text-4xl lg:text-3xl text-2xl md:mb-5 mb-3.5 md:mt-8 mt-5">
+                            {{ qoute_title }}
+                        </h2>
+                        {{ qoute_description }}
+                            <p
+                                class="lg:pl-6 pl-4 border-l-2 border-black text-black xl:text-[22px] lg:text-[20px] sm:text-[18px] text-md font-medium lg:leading-relaxed mb-10">
+                                {{ paragraph }}
+                            </p>
+                        {{ /qoute_description }}
+                    {{ /if }}
+                    {{# more details section #}}
+                    {{ if type == more_details_section }}
+                        <h2 class="uppercase 1xl:text-4xl lg:text-3xl text-2xl md:mb-5 mb-3.5 md:mt-8 mt-5">
+                            {{ more_details_title }}
+                        </h2>
+                        {{ more_description }}
+                            {{ if type == 'content' }}
+                                <p class="text-gray-400 lg:text-lg text-md">{{ paragraph }}</p>
+                            {{ /if }}
+                            {{ if type == 'images' }}
+                                <div class="my-8 flex gap-3 sm:flex-row flex-col">
+                                    {{ image }}
+                                        <img src="{{ url }}" class="sm:w-1/2 w-full max-w-full" />
+                                    {{ /image }}
+                                </div>
+                            {{ /if }}
+                        {{ /more_description }}
+                    {{ /if }}
+                    <ul
+                        class="w-full lg:columns-4 min-[400px]:columns-2 columns-1 custom-list border-t border-gray-100 1xl:pt-10 1xl:mt-10 md:pt-8 pt-5 md:mt-8 mt-5">
+                        {{ tags }}
+                            <li>
+                                {{ title }}
+                            </li>
+                        {{ /tags }}
+                    </ul>
+                </div>
+                <div class="xl:w-2/5 w-full">
+                    {{ form:promote_your_business_press method="POST" action="{route:promote_your_business_press.submit}" id="promote-business-press" attr:novalidate="novalidate" class="bg-primary-800  mx-auto 1xl:p-8 p-4 relative" }}
+                        {{ csrf }}
+                        <h3 class="uppercase mb-7">{{ promote_your_business_form_settings:press_form_title }}</h3>
+                        {{ fields }}
+                            {{ if type == 'checkboxes' }}
+                                <div class="flex flex-wrap">
+                                    {{# <input type="hidden" name="{{ handle }}[]"> #}}
+                                    {{ foreach:options as="option|label" }}
+
+                                        <label for="{{ id }}-{{ option | slugify }}-option"
+                                            class="font-normal text-black lg:text-lg text-md my-2 sm:w-1/2 w-full cursor-pointer flex items-start gap-2.5">
+                                            <input id="{{ id }}-{{ option | slugify }}-option" type="checkbox"
+                                                name="{{ handle }}[]" value="{{ option }}"
+                                                {{ if js_driver }}{{ js_attributes }}{{ /if }}
+                                                {{ if value|in_array:option }}checked{{ /if }}
+                                                {{ if validate|contains:required }}required{{ /if }}
+                                                {{ if error }} aria-invalid="true" aria-describedby="{{ id }}-error" {{ elseif instructions }} aria-describedby="{{ id }}-instructions" {{ /if }}><span>{{ label }}</span></label>
+                                        {{ unless inline }}
+                                            <br>
+                                        {{ /unless }}
+                                    {{ /foreach:options }}
+                                    <small class="field-error text-danger" data-error-for="{{ handle }}">
+                                    </small>
+                                </div>
+                            {{ elseif type=='textarea' }}
+                                <textarea name="{{ handle }}" id="{{ handle }}" class="input-field h-32"
+                                    placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"></textarea>
+                                <small class="field-error text-danger" data-error-for="{{ handle }}">
+                                </small>
+                            {{ else }}
+                                <input id="{{ id }}" type="{{ type }}" name="{{ handle }}" id="{{ handle }}"
+                                    class="input-field"
+                                    placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}">
+                                <small class="field-error text-danger" data-error-for="{{ handle }}">
+                                </small>
+                            {{ /if }}
+                        {{ /fields }}
+                        <div>
+                            <button type="submit"
+                                class="btn-primary mt-6">{{ promote_your_business_form_settings:press_button_label }}</button>
+                            <div id="form-success" class="hidden mt-5 text-green-600"></div>
+                        </div>
+                    {{ /form:promote_your_business_press }}
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end gears section -->
+
+</div>
+
+
+{{ push:scripts }}
+    <script src="{{ theme:asset src="assets/js/promote-business-press-form.js" }}"></script>
+{{ /push:scripts }}

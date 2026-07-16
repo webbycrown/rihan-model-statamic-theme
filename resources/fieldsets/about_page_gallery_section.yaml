@@ -1,0 +1,15 @@
+title: 'About Page Gallery Section'
+fields:
+  -
+    handle: gallery_section_heading
+    field:
+      type: text
+      display: 'Gallery Section Heading'
+  -
+    handle: gallery_images
+    field:
+      max_files: 6
+      min_files: 6
+      container: assets
+      type: assets
+      display: 'Gallery Images'

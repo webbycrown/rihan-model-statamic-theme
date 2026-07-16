@@ -1,0 +1,17 @@
+title: Button
+fields:
+  -
+    handle: label
+    field:
+      type: text
+      display: label
+  -
+    handle: url
+    field:
+      type: link
+      display: Url
+  -
+    handle: class
+    field:
+      type: text
+      display: Class

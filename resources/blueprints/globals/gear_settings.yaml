@@ -1,0 +1,12 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: initial_items
+            field:
+              default: '8'
+              type: integer
+              display: 'Initial Items'

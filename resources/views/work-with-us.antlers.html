@@ -1,0 +1,181 @@
+<!-- start main wrapper -->
+<div class="main-wrapper">
+
+    <!-- start hero section -->
+    {{ partial:page_builder.hero_section }}
+    <!-- end hero section -->
+
+    <!-- start gears section -->
+    <section class="2xl:py-24 1xl:py-20 lg:py-16 py-14">
+        <div class="container">
+            <div class="flex 1xl:gap-14 gap-10 xl:flex-row flex-col">
+                <div class="xl:w-3/5 w-full">
+                    {{ page_builder }}
+                        {{ if type == "sections" }}
+                            {{ elements }}
+                                {{ if type == "images" }}
+                                    <div class="mb-14">
+                                        <div class="swiper work-thumb-view">
+                                            <div class="swiper-wrapper">
+                                                {{ gallery }}
+                                                    <div class="swiper-slide">
+                                                        <img src="{{ url }}" />
+                                                    </div>
+                                                {{ /gallery }}
+                                            </div>
+                                        </div>
+                                        <div thumbsSlider="" class="swiper work-thumbs md:mt-8 mt-4">
+                                            <div class="swiper-wrapper">
+                                                {{# {{ gallery }} #}}
+                                                {{ gallery }}
+                                                    <div class="swiper-slide">
+                                                        <img src="{{ url }}" />
+                                                    </div>
+                                                {{ /gallery }}
+                                                {{# {{ /gallery }} #}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{ /if }}
+                                {{ if type == "title_and_info" }}
+                                    {{ if title }}
+                                        <h2
+                                            class="uppercase 1xl:text-4xl lg:text-3xl text-2xl md:mb-5 mb-3.5 border-t border-gray-100 1xl:pt-12 1xl:mt-12 md:pt-8 pt-5 md:mt-8 mt-5">
+                                            {{ title }}
+                                        </h2>
+                                    {{ /if }}
+                                    <ul>
+                                        {{ grid_field }}
+                                            <li
+                                                class="flex 2xl:text-[20px] lg:text-lg text-gray-400 font-normal text-md bg-primary-800/50 border border-primary-800 mb-1.5">
+                                                <span
+                                                    class="w-1/2 font-semibold text-black md:px-7 px-4 md:py-4 py-3">{{ title }}</span>
+                                                <span class="w-1/2 md:px-7 px-4 md:py-4 py-3">{{ information }}</span>
+                                            </li>
+                                        {{ /grid_field }}
+                                    </ul>
+                                {{ /if }}
+                                {{ if type == "paragraphs" }}
+                                    {{ if title }}
+                                        <h2
+                                            class="uppercase 1xl:text-4xl lg:text-3xl text-2xl md:mb-5 mb-3.5 border-t border-gray-100 1xl:pt-12 1xl:mt-12 md:pt-8 pt-5 md:mt-8 mt-5">
+                                            {{ title }}
+                                        </h2>
+                                    {{ /if }}
+                                    {{ paragraph }}
+                                        <p class="text-gray-400 lg:text-lg text-md">
+                                            {{ new_paragraph }}
+                                        </p>
+                                    {{ /paragraph }}
+                                {{ /if }}
+                                {{ if type == "buttons" }}
+                                    <div
+                                        class="xl:mt-12 mt-8 mb-8 pb-8 border-b border-gray-100 flex gap-3 sm:flex-row flex-col">
+                                        {{ button }}
+                                            <a href="{{if button_url}}{{button_url}}{{else}}javascript:;{{/if}}"
+                                                class="{{ button_class }}">{{ button_label }}</a>
+                                        {{ /button }}
+                                    </div>
+                                {{ /if }}
+                                {{ if type == "videos" }}
+                                    {{ if title }}
+                                        <h2
+                                            class="uppercase 1xl:text-4xl lg:text-3xl text-2xl md:mb-5 mb-3.5 border-t border-gray-100 1xl:pt-12 1xl:mt-12 md:pt-8 pt-5 md:mt-8 mt-5">
+                                            {{ title }}
+                                        </h2>
+                                    {{ /if }}
+                                    <div class="bg-primary-800 xl:p-6 md:p-4 p-2.5">
+                                        <div class="flex items-center justify-center relative">
+                                            {{ thumbnail_image }}
+                                                <img src="{{ url }}" alt="img" class="w-full h-fu;;" />
+                                            {{ /thumbnail_image }}
+                                            <a class="popup-youtube xl:w-20 xl:h-20 md:w-16 md:h-16 w-12 h-12 flex items-center justify-center hover:scale-95 transition-all bg-white rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                                                href="{{ video }}">
+                                                <svg width="31" height="38" viewBox="0 0 31 38" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" class="lg:w-7 md:w-5 w-4 z-1">
+                                                    <path
+                                                        d="M3.49711 37.7432C2.95717 37.7432 2.41723 37.5555 1.94365 37.1839C1.07191 36.4981 0.541016 35.2914 0.541016 33.9888V3.95362C0.541016 2.65107 1.07191 1.44047 1.94365 0.758548C2.41723 0.39077 2.95717 0.199219 3.49711 0.199219C3.94655 0.199219 4.40505 0.329473 4.8183 0.593814L28.467 15.6114C29.4685 16.2474 30.1019 17.5499 30.1019 18.9712C30.1019 20.3925 29.4685 21.6951 28.467 22.331L4.8183 37.3486C4.40505 37.6129 3.94655 37.7432 3.49711 37.7432Z"
+                                                        fill="currentcolor" />
+                                                </svg>
+                                                <span
+                                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75 z-0"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                {{ /if }}
+                                {{ if type == "tags" }}
+                                    {{ if title }}
+                                        <h2
+                                            class="uppercase 1xl:text-4xl lg:text-3xl text-2xl md:mb-5 mb-3.5 border-t border-gray-100 1xl:pt-12 1xl:mt-12 md:pt-8 pt-5 md:mt-8 mt-5">
+                                            {{ title }}
+                                        </h2>
+                                    {{ /if }}
+                                    <ul class="w-full lg:columns-4  min-[400px]:columns-2 columns-1 custom-list">
+                                        {{ tags }}
+                                            <li>
+                                                {{ title }}
+                                            </li>
+                                        {{ /tags }}
+                                    </ul>
+                                {{ /if }}
+                            {{ /elements }}
+                        {{ /if }}
+                    {{ /page_builder }}
+                </div>
+                <div class="xl:w-2/5 w-full">
+                    {{ form:promote_your_business_press method="POST" action="{route:promote_your_business_press.submit}" id="promote-business-press" attr:novalidate="novalidate" class="bg-primary-800  mx-auto 1xl:p-8 p-4 relative" }}
+                        {{ csrf }}
+                        <h3 class="uppercase mb-7">{{ promote_your_business_form_settings:press_form_title }}</h3>
+                        {{ fields }}
+                            {{ if type == 'checkboxes' }}
+                                <div class="flex flex-wrap">
+                                    {{# <input type="hidden" name="{{ handle }}[]"> #}}
+                                    {{ foreach:options as="option|label" }}
+
+                                        <label for="{{ id }}-{{ option | slugify }}-option"
+                                            class="font-normal text-black lg:text-lg text-md my-2 sm:w-1/2 w-full cursor-pointer flex items-start gap-2.5">
+                                            <input id="{{ id }}-{{ option | slugify }}-option" type="checkbox"
+                                                name="{{ handle }}[]" value="{{ option }}"
+                                                {{ if js_driver }}{{ js_attributes }}{{ /if }}
+                                                {{ if value|in_array:option }}checked{{ /if }}
+                                                {{ if validate|contains:required }}required{{ /if }}
+                                                {{ if error }} aria-invalid="true" aria-describedby="{{ id }}-error" {{ elseif instructions }} aria-describedby="{{ id }}-instructions" {{ /if }}><span>{{ label }}</span></label>
+                                        {{ unless inline }}
+                                            <br>
+                                        {{ /unless }}
+                                    {{ /foreach:options }}
+                                    <small class="field-error text-danger" data-error-for="{{ handle }}">
+                                    </small>
+                                </div>
+                            {{ elseif type=='textarea' }}
+                                <textarea name="{{ handle }}" id="{{ handle }}" class="input-field h-32"
+                                    placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}"></textarea>
+                                <small class="field-error text-danger" data-error-for="{{ handle }}">
+                                </small>
+                            {{ else }}
+                                <input id="{{ id }}" type="{{ type }}" name="{{ handle }}" id="{{ handle }}"
+                                    class="input-field"
+                                    placeholder="{{ placeholder }}{{ if validate contains='required' }} *{{ /if }}">
+                                <small class="field-error text-danger" data-error-for="{{ handle }}">
+                                </small>
+                            {{ /if }}
+                        {{ /fields }}
+                        <div>
+                            <button type="submit"
+                                class="btn-primary mt-6">{{ promote_your_business_form_settings:press_button_label }}</button>
+                            <div id="form-success" class="hidden mt-5 text-green-600"></div>
+                        </div>
+                    {{ /form:promote_your_business_press }}
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end gears section -->
+
+</div>
+
+
+{{ push:scripts }}
+    <script src="{{ theme:asset src="assets/js/promote-business-press-form.js" }}"></script>
+{{ /push:scripts }}

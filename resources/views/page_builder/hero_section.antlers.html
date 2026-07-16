@@ -1,0 +1,28 @@
+{{ page_builder }}
+    {{ if type == "hero_section" }}
+        <section>
+            <div class="2xl:py-24 1xl:py-20 lg:py-16 py-14 bg-primary-800">
+                <div class="container">
+                    <div class="flex gap-3 lg:flex-nowrap flex-wrap">
+
+                        <h1 class="lg:w-5/12 w-full mb-0 uppercase">
+                            {{ hero_section_title }}
+                        </h1>
+
+                        <div class="lg:w-7/12 w-full">
+                            <p class="mb-0 font-normal read-more-text">
+                                {{ hero_section_description }}
+                                <span class="more-content"></span>
+                                <button type="button"
+                                    class="hover:opacity-65 text-black underline ml-1.5 underline-offset-2 more-link">
+                                    Read More
+                                </button>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{ /if }}
+{{ /page_builder }}

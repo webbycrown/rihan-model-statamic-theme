@@ -1,0 +1,7 @@
+title: Press
+template: press/show
+route: 'press/{slug}'
+revisions: false
+date_behavior:
+  past: public
+  future: private

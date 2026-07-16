@@ -1,0 +1,137 @@
+title: Sections
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: elements
+    field:
+      type: replicator
+      display: Elements
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            paragraphs:
+              display: Paragraphs
+              fields:
+                -
+                  handle: paragraph
+                  field:
+                    type: replicator
+                    display: Paragraph
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          new_set:
+                            display: 'New Set'
+                            fields:
+                              -
+                                handle: new_paragraph
+                                field:
+                                  type: textarea
+                                  display: 'New Paragraph'
+            buttons:
+              display: Buttons
+              fields:
+                -
+                  handle: button
+                  field:
+                    type: replicator
+                    display: Button
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          new_set:
+                            display: 'New Set'
+                            fields:
+                              -
+                                handle: button_label
+                                field:
+                                  type: text
+                                  display: 'Button Label'
+                              -
+                                handle: button_url
+                                field:
+                                  type: link
+                                  display: 'Button Url'
+                              -
+                                handle: button_class
+                                field:
+                                  type: text
+                                  display: 'Button Class'
+            images:
+              display: Images
+              fields:
+                -
+                  handle: featured_image
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Featured Image'
+                -
+                  handle: gallery
+                  field:
+                    container: assets
+                    type: assets
+                    display: Gallery
+            videos:
+              display: Videos
+              fields:
+                -
+                  handle: thumbnail_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Thumbnail Image'
+                -
+                  handle: video
+                  field:
+                    type: video
+                    display: Video
+            tags:
+              display: Tags
+              fields:
+                -
+                  handle: tags
+                  field:
+                    mode: select
+                    collections:
+                      - tags
+                    type: entries
+                    display: Tags
+            title_and_info:
+              display: 'Title And Info'
+              fields:
+                -
+                  handle: grid_field
+                  field:
+                    type: grid
+                    display: 'Grid Field'
+                    fields:
+                      -
+                        handle: title
+                        field:
+                          type: text
+                          display: Title
+                      -
+                        handle: information
+                        field:
+                          type: text
+                          display: Information
+  -
+    handle: entries_field
+    field:
+      mode: select
+      collections:
+        - works
+        - press
+        - gears
+      type: entries
+      display: 'Entries Field'

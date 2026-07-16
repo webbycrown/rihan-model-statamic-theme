@@ -1,0 +1,52 @@
+title: 'Gear Product'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+          -
+            handle: image
+            field:
+              container: assets
+              type: assets
+              display: Image
+              max_files: 1
+              min_files: 1
+          -
+            handle: buy_link
+            field:
+              type: link
+              display: 'Buy Link'
+          -
+            handle: category
+            field:
+              max_items: 1
+              mode: select
+              collections:
+                - gear_categories
+              type: entries
+              display: Category
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

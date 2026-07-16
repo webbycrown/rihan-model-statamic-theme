@@ -1,0 +1,111 @@
+<!-- start-header -->
+<header class="header fixed top-0 left-0 w-full z-20 transition-all {{if !is_homepage}} bg-primary-400 {{/if}}}"
+    :class="{ 'header-open': open }">
+
+
+    <!-- navbar start -->
+    <nav class="container">
+        <div class="flex flex-wrap items-center justify-between mx-auto lg:py-5 py-3 header-wrap transition-all">
+            <div class="lg:order-1 order-2">
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="mobile-toggle relative z-2 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg lg:hidden focus:outline-none dark:focus:ring-gray-600 group "
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                        class="w-5 h-5 group-[.active]:hidden block" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 11H15M1 6H15M1 1H9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4  group-[.active]:block hidden ">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.99996 10.6496L15.5998 17.2495C15.8198 17.462 16.1145 17.5796 16.4204 17.5769C16.7263 17.5743 17.0189 17.4516 17.2352 17.2353C17.4516 17.0189 17.5743 16.7263 17.5769 16.4204C17.5796 16.1145 17.462 15.8198 17.2495 15.5998L10.6496 8.99997L17.2495 2.40014C17.462 2.1801 17.5796 1.8854 17.5769 1.5795C17.5743 1.27361 17.4516 0.980992 17.2352 0.764683C17.0189 0.548373 16.7263 0.425676 16.4204 0.423018C16.1145 0.42036 15.8198 0.537953 15.5998 0.750471L8.99996 7.3503L2.40012 0.750471C2.1791 0.543206 1.8861 0.430064 1.58314 0.434983C1.28018 0.439903 0.991014 0.562499 0.776834 0.77683C0.562655 0.991162 0.440263 1.28041 0.435558 1.58338C0.430852 1.88635 0.544202 2.17926 0.751623 2.40014L7.35029 8.99997L0.750456 15.5998C0.639028 15.7074 0.550149 15.8362 0.489005 15.9785C0.427861 16.1208 0.395677 16.2739 0.394331 16.4288C0.392985 16.5837 0.422503 16.7374 0.481164 16.8807C0.539826 17.0241 0.626454 17.1544 0.735996 17.2639C0.845537 17.3735 0.975798 17.4601 1.11918 17.5188C1.26256 17.5774 1.41618 17.6069 1.57109 17.6056C1.726 17.6043 1.87909 17.5721 2.02143 17.5109C2.16377 17.4498 2.2925 17.3609 2.40012 17.2495L8.99996 10.6496Z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+                <div class="w-full block lg:w-auto lg:relative mobile-nav main-menu z-1" id="navbar-default">
+                    <div class="container lg:py-5 py-3 ">
+                        <div
+                            class="max-w-[140px] md:max-w-[180px] xl:max-w-[200px] 1xl:max-w-[250px] 2xl:max-w-full lg:order-2 order-1 lg:hidden block">
+                            <a href="{{ logo:url }}" class="flex items-center  transition-all logo-box">
+                                <img src="{{ logo:dark_logo }}" class="lg:h-14 h-10 lg:hidden block" alt="Logo" />
+                            </a>
+                        </div>
+                        <ul
+                            class="navbar font-medium flex items-center flex-col text-black uppercase text-sm lg:text-md p-4 md:p-0  rounded-lg bg-gray-50 lg:flex-row space-x-4 xl:space-x-8 rtl:space-x-reverse md:mt-0">
+
+                            {{ nav:header_menu }}
+                                <li>
+                                    <a href="{{ url }}"
+                                        class="transition-all nav-link {{ if is_current || is_parent }}nav-active{{ /if }}">{{ title }}
+                                    </a>
+                                </li>
+                            {{ /nav:header_menu }}
+                            <li class="lg:hidden block">
+                                <a href="{{ header:button_url }}"
+                                    class="transition-all nav-link">{{ header:button_label }}</a>
+                            </li>
+                            <li class="lg:hidden block">
+                                <ul class="flex items-center gap-1 header-social  w-max m-auto">
+                                    {{ social_icons:social_fa_icons }}
+                                        <li>
+                                            <a href="{{ icon_url ?? 'javascript:;' }}">
+                                                <i class="xl:w-6 w-5 hover:opacity-60 transition-all
+                                {{ if icon_list == 'phone' || icon_list == 'envelope' }}
+                                    fa-solid
+                                {{ else }}
+                                    fa-brands
+                                {{ /if }}
+                                fa-{{ icon_list }}">
+                                                </i>
+                                            </a>
+                                        </li>
+                                    {{ /social_icons:social_fa_icons }}
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="max-w-[140px] md:max-w-[180px] xl:max-w-[200px] 1xl:max-w-[250px] 2xl:max-w-full lg:order-2 order-1">
+                <a href="{{ logo:url }}" class="flex items-center  transition-all logo-box">
+                    {{ if is_homepage }}
+                        <img src="{{ logo:light_logo }}" class="lg:h-14 h-10 hidden lg:block" alt="Logo" />
+                    {{ /if }}
+                    <img src="{{ logo:dark_logo }}" class="lg:h-14 h-10 {{ if is_homepage }}lg:hidden block {{/if}}"
+                        alt="Logo" />
+                </a>
+            </div>
+
+            <div class="lg:flex hidden items-center gap-6 order-3">
+                <ul class="flex items-center 1xl:gap-4 xl:gap-3 gap-2 header-social">
+
+                    {{ social_icons:social_fa_icons }}
+                        <li>
+                            <a href="{{ icon_url ?? 'javascript:;' }}">
+                                <i class="xl:w-6 w-5 hover:opacity-60 transition-all text-2xl
+                                {{ if icon_list == 'phone' || icon_list == 'envelope' }}
+                                    fa-solid
+                                {{ else }}
+                                    fa-brands
+                                {{ /if }}
+                                fa-{{ icon_list }}">
+                                </i>
+                            </a>
+                        </li>
+                    {{ /social_icons:social_fa_icons }}
+
+                </ul>
+                <a href="{{ header:button_url }}"
+                    class="uppercase border xl:text-lg text-md xl:px-8 px-4 xl:py-2.5 py-2 {{if is_homepage}}btn-white border-white text-white hover:bg-white hover:text-black{{else}}font-normal border-black text-black hover:bg-black hover:text-white{{/if}}">{{ header:button_label }}</a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- navbar end -->
+</header>
+<!-- end-header -->

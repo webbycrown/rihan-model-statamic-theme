@@ -1,0 +1,47 @@
+<!-- start main wrapper -->
+<div class="main-wrapper">
+    <!-- start hero section -->
+    {{ partial:page_builder/hero_section }}
+    <!-- end hero section -->
+    <!-- start gears section -->
+    {{ partial:collections.gears }}
+    <!-- end gears section -->
+</div>
+
+{{ push:scripts }}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let wrapper = document.querySelector('.gears-initial-items');
+            if (!wrapper) return;
+            let limit = parseInt(wrapper.dataset.limit); // initial/load more count
+            let items = document.querySelectorAll('.gear-item');
+            let loadMoreBtn = document.querySelector('.all-btn');
+            let currentIndex = limit;
+            // Initially hide items after first limit
+            items.forEach((item, index) => {
+                if (index >= limit) {
+                    item.style.display = "none";
+                }
+            });
+            // Load more button click
+            loadMoreBtn?.addEventListener('click', function() {
+
+                let nextItems = Array.from(items).slice(currentIndex, currentIndex + limit);
+
+                nextItems.forEach(item => {
+                    item.style.display = "block";
+                });
+
+                currentIndex += limit;
+
+                // Hide button when all items are visible
+                if (currentIndex >= items.length) {
+                    this.style.display = "none";
+                }
+
+            });
+
+        });
+    </script>
+{{ /push:scripts }}

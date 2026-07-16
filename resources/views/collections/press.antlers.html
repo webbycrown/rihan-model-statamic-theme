@@ -1,0 +1,41 @@
+{{ collection:press sort="date:desc" }}
+
+    <div class="w-full flex flex-col 1xl:gap-6 gap-4 items-start 1xl:mb-20 mb-12 break-inside-avoid">
+        {{ if index >= 5 and index < 10 }}
+            <div
+                class="bg-white min-w-[160px] inline-flex items-center justify-center 1xl:px-6 px-4 1xl:py-4 py-3 border border-gray-100">
+                {{ image_logo }}
+                    <img src="{{ url }}" class="1xl:h-9 h-8 w-auto" />
+                {{ /image_logo }}
+            </div>
+            <a href="{{ url }}" class="block w-full">
+                {{ featured_image }}
+                    <img src="{{ url }}" class="w-full" />
+                {{ /featured_image }}
+            </a>
+        {{ else }}
+            <a href="{{ url }}" class="block w-full">
+                {{ featured_image }}
+                    <img src="{{ url }}" class="w-full" />
+                {{ /featured_image }}
+            </a>
+            <div
+                class="bg-white min-w-[160px] inline-flex items-center justify-center 1xl:px-6 px-4 1xl:py-4 py-3 border border-gray-100">
+                {{ image_logo }}
+                    <img src="{{ url }}" class="1xl:h-9 h-8 w-auto" />
+                {{ /image_logo }}
+            </div>
+        {{ /if }}
+        <h3 class="2xl:text-3xl lg:text-2xl text-xl text-black  uppercase mb-0">{{ title }}<span
+                class="block lg:text-lg md:text-md text-sm capitalize font-inconsolata">{{ span_text }}</span></h3>
+        <a href="{{ url }}"
+            class="all-btn 1xl:text-lg sm:text-md text-sm 2xl:px-14 md:px-8 px-6 inline-flex items-center justify-center gap-2.5">{{ button_label }}
+            <svg width="16" height="14" viewBox="0 0 16 14" fill="none" class="sm:w-4 w-3"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M9.00501 13.4816C8.90938 13.3859 8.85567 13.2561 8.85567 13.1208C8.85567 12.9854 8.90938 12.8557 9.00501 12.7599L14.2605 7.50359L0.514558 7.50359C0.379125 7.50359 0.249239 7.44979 0.153473 7.35402C0.0577065 7.25825 0.00390595 7.12837 0.00390596 6.99293C0.00390597 6.8575 0.0577066 6.72761 0.153473 6.63185C0.249239 6.53608 0.379125 6.48228 0.514559 6.48228L14.2605 6.48228L9.00501 1.22596C8.91481 1.12916 8.8657 1.00113 8.86804 0.868831C8.87037 0.736538 8.92396 0.610314 9.01752 0.516754C9.11108 0.423193 9.23731 0.369601 9.3696 0.367267C9.50189 0.364933 9.62993 0.414039 9.72673 0.504241L15.8546 6.63207C15.9502 6.72782 16.0039 6.85761 16.0039 6.99294C16.0039 7.12826 15.9502 7.25805 15.8546 7.3538L9.72673 13.4816C9.63098 13.5773 9.50119 13.631 9.36587 13.631C9.23055 13.631 9.10076 13.5773 9.00501 13.4816Z"
+                    fill="currentcolor" />
+            </svg>
+        </a>
+    </div>
+{{ /collection:press }}

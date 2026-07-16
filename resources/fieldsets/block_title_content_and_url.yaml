@@ -1,0 +1,74 @@
+title: 'Block Title,Content And Url'
+fields:
+  -
+    handle: block_title
+    field:
+      type: text
+      display: 'Block Title'
+  -
+    handle: title_content_url
+    field:
+      type: replicator
+      display: 'Title,Content,Url'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            sub_block:
+              display: 'Sub Block'
+              fields:
+                -
+                  handle: sub_block_title
+                  field:
+                    type: text
+                    display: 'Sub-Block Title'
+                -
+                  handle: sub_block_content
+                  field:
+                    buttons:
+                      - h2
+                      - h3
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - quote
+                      - anchor
+                      - image
+                      - table
+                      - h1
+                      - h4
+                      - h5
+                      - h6
+                      - underline
+                      - strikethrough
+                      - small
+                      - superscript
+                      - subscript
+                      - code
+                      - codeblock
+                      - horizontalrule
+                      - alignleft
+                      - aligncenter
+                      - alignright
+                      - alignjustify
+                    remove_empty_nodes: false
+                    type: bard
+                    display: 'Sub-Block Content'
+                -
+                  handle: sub_block_url
+                  field:
+                    type: grid
+                    display: 'Sub Block Url'
+                    fields:
+                      -
+                        handle: sub_block_link
+                        field:
+                          type: link
+                          display: 'Sub Block Link'
+                      -
+                        handle: sub_block_label
+                        field:
+                          type: text
+                          display: 'Sub Block Label'

@@ -1,0 +1,52 @@
+<div class="main-wrapper">
+
+    <section class="border-t border-primary-800">
+        <div class="2xl:py-24 1xl:py-20 lg:py-16 py-14">
+            <div class="container">
+                <div class="flex gap-3 lg:flex-nowrap flex-wrap">
+                    <h1 class="lg:w-5/12 w-full mb-0 uppercase">
+                        {{ title }}
+                    </h1>
+                    <div class="lg:w-7/12 w-full">
+                        {{ page_builder }}
+                            {{ if type == "block_title_content_and_url" }}
+                                <div class="xl:mb-12 mb-6">
+                                    <h2
+                                        class="uppercase 1xl:text-4xl lg:text-3xl text-2xl md:mb-5 mb-5 md:pb-5 pb-3 border-b border-gray-100">
+                                        {{ block_title }}
+                                    </h2>
+                                    <div class="flex items-start md:flex-nowrap flex-wrap">
+                                        {{ title_content_url }}
+                                            <div class="md:w-1/2 w-full">
+                                                <p class="text-gray-400 mb-3">
+                                                    {{ sub_block_title }}
+                                                </p>
+                                                <p
+                                                    class="flex items-start font-medium xl:text-[22px] lg:text-lg text-md text-black">
+
+                                                    <img src="{{ theme:asset src="assets/img/arrow-line.svg" }}"
+                                                        class="mt-1 mr-3 lg:w-[16px] w-3">
+                                                    <span>
+                                                        {{ if (sub_block_content | strip_tags | trim) }}
+                                                            {{ sub_block_content | replace('<p>', '') | replace('</p>', '') }}
+                                                            <br>
+                                                            <br>
+                                                        {{ /if }}
+                                                        {{ sub_block_url }}
+                                                            <a href="{{ sub_block_link }}"
+                                                                class="hover:underline">{{ sub_block_label }}</a>
+                                                        {{ /sub_block_url }}
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        {{ /title_content_url }}
+                                    </div>
+                                </div>
+                            {{ /if }}
+                        {{ /page_builder }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

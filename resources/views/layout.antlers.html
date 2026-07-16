@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- All device viewport meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
+    <title>Rihan</title>
+    <!-- Project favicon link -->
+    <link rel="icon" href="{{ theme:asset src="assets/img/favicon.png" }}" type="image/gif">
+    {{ partial:partial/styles }}
+    {{ stack:styles }}
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader ">
+        <div class="preloader-inner">
+            {{ if preloader:image }}
+                {{ preloader:image }}
+                    <img src="{{ url }}" alt="preloader"  class="logo-light" height="auto" width="50%">
+                    <img src="{{ url }}" alt="preloader"  class="logo-dark" height="auto" width="50%">
+                {{ /preloader:image }}
+            {{ /if }}
+        </div>
+    </div>
+
+    <div class="text-md 1xl:text-lg font-lexend antialiased font-light text-black leading-md 1xl:leading-xl overflow-x-hidden {{if !is_homepage}} pt-[64px] lg:pt-[96px]{{else}}home-page{{/if}}"
+        x-data="{ show: false , open: false }">
+
+        {{# Start header #}}
+        {{ partial:partial/header }}
+        {{# End header #}}
+        {{# Start Content #}}
+        {{ template_content }}
+        {{# End Content #}}
+        {{# Start footer #}}
+        {{ partial:partial/footer }}
+        {{# End footer #}}
+    </div>
+
+
+    {{ partial:partial/scripts }}
+    {{ stack:scripts }}
+</body>
+
+</html>

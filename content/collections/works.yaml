@@ -1,0 +1,7 @@
+title: Works
+template: works/show
+route: 'works/{slug}'
+revisions: false
+date_behavior:
+  past: public
+  future: private

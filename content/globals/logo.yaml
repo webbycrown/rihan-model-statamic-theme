@@ -1,0 +1,5 @@
+title: Logo
+data:
+  dark_logo: img/dark-logo.svg
+  light_logo: img/white-logo.svg
+  url: /

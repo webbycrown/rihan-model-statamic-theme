@@ -1,0 +1,26 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: form_title
+            field:
+              type: text
+              display: 'Form Title'
+          -
+            handle: button_label
+            field:
+              type: text
+              display: 'Button Label'
+          -
+            handle: press_form_title
+            field:
+              type: text
+              display: 'Press Form Title'
+          -
+            handle: press_button_label
+            field:
+              type: text
+              display: 'Press Button Label'

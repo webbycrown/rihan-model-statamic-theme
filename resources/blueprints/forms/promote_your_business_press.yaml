@@ -1,0 +1,85 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: your_name
+            field:
+              placeholder: 'Your Name'
+              type: text
+              display: 'Your Name'
+              validate:
+                - required
+          -
+            handle: company
+            field:
+              placeholder: Company
+              type: text
+              display: Company
+              validate:
+                - required
+          -
+            handle: email_address
+            field:
+              placeholder: 'Email Address'
+              type: text
+              display: 'Email Address'
+              validate:
+                - required
+                - email
+          -
+            handle: phone_number
+            field:
+              placeholder: 'Phone Number'
+              type: integer
+              display: 'Phone Number'
+              validate:
+                - required
+                - 'min:10'
+                - 'max:10'
+                - numeric
+          -
+            handle: role
+            field:
+              options:
+                -
+                  key: modelling_assignment
+                  value: 'Modelling Assignment'
+                -
+                  key: movie_role
+                  value: 'Movie Role'
+                -
+                  key: tv_serial_role
+                  value: 'TV Serial Role'
+                -
+                  key: magazine_ad
+                  value: 'Magazine Ad'
+                -
+                  key: event_management
+                  value: 'Event Management'
+                -
+                  key: guest_appearance
+                  value: 'Guest Appearance'
+              default:
+                - 'Modelling Assignment'
+                - modelling_assignment
+              type: checkboxes
+              display: Role
+          -
+            handle: budget
+            field:
+              placeholder: Budget
+              type: text
+              display: Budget
+              validate:
+                - required
+          -
+            handle: brief_enquiry
+            field:
+              placeholder: 'Brief Enquiry : (Max 300 words)'
+              type: textarea
+              display: 'Brief Enquiry'
+              validate:
+                - required

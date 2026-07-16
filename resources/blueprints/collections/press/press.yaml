@@ -1,0 +1,165 @@
+title: Press
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Featured Image'
+          -
+            handle: button_label
+            field:
+              type: text
+              display: 'Button Label'
+          -
+            handle: image_logo
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Image Logo'
+          -
+            handle: span_text
+            field:
+              type: text
+              display: 'Span Text'
+      -
+        display: 'Press Details'
+        fields:
+          -
+            import: all_page_builder
+          -
+            handle: thumb_image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Thumb Image'
+          -
+            handle: heading
+            field:
+              type: text
+              display: Heading
+      -
+        display: 'Intro Section'
+        fields:
+          -
+            handle: intro_title
+            field:
+              type: text
+              display: 'Intro Title'
+          -
+            handle: intro_description
+            field:
+              type: replicator
+              display: 'Intro Description'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: paragraph
+                          field:
+                            type: textarea
+                            display: Paragraph
+      -
+        display: 'Quote Section'
+        fields:
+          -
+            handle: qoute_title
+            field:
+              type: text
+              display: 'Qoute Title'
+          -
+            handle: qoute_description
+            field:
+              type: replicator
+              display: 'Qoute Description'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: paragraph
+                          field:
+                            type: textarea
+                            display: Paragraph
+      -
+        display: 'More Details Section'
+        fields:
+          -
+            handle: more_details_title
+            field:
+              type: text
+              display: 'More Details Title'
+          -
+            handle: more_description
+            field:
+              type: replicator
+              display: 'More Description'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    content:
+                      display: Content
+                      fields:
+                        -
+                          handle: paragraph
+                          field:
+                            type: textarea
+                            display: Paragraph
+                    images:
+                      display: Images
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 2
+                            container: assets
+                            type: assets
+                            display: Image
+      -
+        display: 'Tags List'
+        fields:
+          -
+            handle: tags
+            field:
+              mode: select
+              collections:
+                - tags
+              type: entries
+              display: Tags
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

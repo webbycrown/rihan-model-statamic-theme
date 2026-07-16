@@ -1,0 +1,142 @@
+ <!-- start main wrapper -->
+ <div class="main-wrapper">
+
+     <!-- start hero section -->
+     {{ partial:page_builder/hero_section }}
+     <!-- end hero section -->
+
+     <!-- start about section -->
+     <section class="2xl:py-24 1xl:py-20 lg:py-16 py-10">
+         <div class="container">
+             <div class="flex items-center gap-6 xl:flex-nowrap flex-wrap">
+                 {{ page_builder }}
+                     {{ if type == "about_page_section" }}
+                         <div class="1xl:w-3/5 xl:1/2 w-full 2xl:pr-8 xl:order-1 order-2">
+                             <h2 class="2xl:text-4xl xl:text-3xl text-2xl text-black uppercase leading-snug mb-4">
+                                 {{ section_heading }}
+                                     {{ if type == "heading_label" }}
+                                         {{ label }}
+                                     {{ /if }}
+                                     {{ if type == "new_set" }}
+                                         <span class="bg-primary-800 lowercase">
+                                             {{ span_text }}
+                                         </span>
+                                     {{ /if }}
+                                     {{ if type == "text" }}
+                                         {{ text }}
+                                     {{ /if }}
+                                 {{ /section_heading }}
+                             </h2>
+                             {{ section_description }}
+                         </div>
+                         {{ section_image }}
+                             <div class="1xl:w-2/5 xl:1/2 w-full xl:order-2 order-1">
+                                 <img src="{{ url }}" class="block mx-auto">
+                             </div>
+                         {{ /section_image }}
+                     {{ /if }}
+                 {{ /page_builder }}
+             </div>
+
+         </div>
+     </section>
+     <!-- end about section -->
+
+     <!-- start about gallery section -->
+     <section class="2xl:py-24 1xl:py-20 lg:py-16  py-10 border-t border-dashed border-primary-800">
+         {{ page_builder }}
+             {{ if type == "about_page_gallery_section" }}
+                 {{# {{ dump }} #}}
+                 <div class="container">
+                     <div class="xl:w-1/2 w-full ml-auto block">
+                         <h2
+                             class="2xl:text-4xl xl:text-3xl text-2xl text-black uppercase leading-snug xl:mb-4 mb-8 xl:w-[90%]">
+                             {{ gallery_section_heading }}
+                         </h2>
+                     </div>
+                     <div
+                         class="grid items-end lg:gap-6 gap-3 xl:grid-cols-5 lg:grid-cols-3 grid-cols-2 2xl:-mt-48 1xl:-mt-40 xl:-mt-24">
+                         {{ gallery_images }}
+                             {{ if index == 0 }}
+                                 <div class="grid xl:grid-cols-1 grid-cols-2 lg:gap-6 gap-3 xl:col-auto col-span-2">
+                                     <img src="{{ url }}" class="rounded-lg block max-w-full">
+                             {{ /if }}
+                             {{ if index == 1 }}
+                                 <img src="{{ url }}"
+                                     class="rounded-lg block max-w-full xl:mt-0 lg:mt-8 xl:mb-0 lg:-mb-8">
+                     </div>
+                     {{ /if }}
+                     {{ if index == 2 }}
+                         <img src="{{ url }}" class="rounded-lg block max-w-full xl:mb-12">
+                     {{ /if }}
+                     {{ if index == 3 }}
+                         <img src="{{ url }}" class="rounded-lg block max-w-full xl:mb-32">
+                     {{ /if }}
+                     {{ if index == 4 }}
+                         <img src="{{ url }}" class="rounded-lg block max-w-full xl:-mb-4 lg:-mb-8">
+                     {{ /if }}
+                     {{ if index == 5 }}
+                         <img src="{{ url }}" class="rounded-lg block max-w-full xl:mb-10">
+                     {{ /if }}
+                     {{ /gallery_images }}
+                 </div>
+ </div>
+ {{ /if }}
+ {{ /page_builder }}
+
+ </section>
+ <!-- end about gallery section -->
+
+ <!-- start about gallery section -->
+ <section class="">
+     <div class="container">
+         {{ page_builder }}
+             {{ if type == "block_title_and_content" }}
+                 {{ blocks }}
+                     <div
+                         class="flex items-start xl:flex-nowrap flex-wrap 2xl:gap-20 xl:gap-10 xl:mt-10 lg:mt-8 mt-4  ">
+                         <h2 class="uppercase 1xl:text-4xl lg:text-3xl text-2xl text-black xl:w-1/3 w-full">
+                             {{ block_title }}
+                         </h2>
+                         <div class="xl:w-2/3">
+                             {{ block_content }}
+                         </div>
+                     </div>
+                 {{ /blocks }}
+             {{ /if }}
+         {{ /page_builder }}
+     </div>
+ </section>
+ <!-- end about gallery section -->
+
+ <!-- start instagram section -->
+ <section class="2xl:py-24 xl:py-16 py-10 relative">
+     <div class="container">
+         {{ page_builder }}
+             {{# {{dump}} #}}
+             {{ if type == "instagram_section" }}
+                 <h2 class="text-black lg:mb-12 mb-6 uppercase"> {{ heading }} <a href="{{ url }}" target="_blank"
+                         class="hover:underline">{{ user_name }}</a></h2>
+                 <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4">
+                     {{ grid_images }}
+                         {{ image }}
+                             <div class="relative group">
+                                 <a href="{{ image_url }}" target="_blank"
+                                     class="absolute left-0 top-0 right-0 bottom-0 lg:p-6 m-4 p-4 bg-[#F1E8E0B2] transition-all flex items-center justify-center scale-0 group-hover:scale-100">
+                                     <img src="{{ theme:asset src="assets/img/instagram-dark.svg" }}" />
+                                 </a>
+                                 <img src="{{ image }}" class="w-full h-full object-cover" />
+                             </div>
+
+                         {{ /image }}
+                     {{ /grid_images }}
+
+                 </div>
+             {{ /if }}
+         {{ /page_builder }}
+     </div>
+ </section>
+ <!-- end instagram section -->
+ </div>
+
+

@@ -1,0 +1,98 @@
+title: 'About Page Section'
+fields:
+  -
+    handle: section_description
+    field:
+      remove_empty_nodes: false
+      type: bard
+      display: 'Section Description'
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - h1
+        - h4
+        - h5
+        - h6
+        - underline
+        - strikethrough
+        - small
+        - superscript
+        - subscript
+        - code
+        - codeblock
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+  -
+    handle: section_image
+    field:
+      container: assets
+      type: assets
+      display: 'Section Image'
+      max_files: 1
+      min_files: 1
+  -
+    handle: section_heading
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+        - h1
+        - h4
+        - h5
+        - h6
+        - underline
+        - strikethrough
+        - small
+        - superscript
+        - subscript
+        - code
+        - codeblock
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      remove_empty_nodes: false
+      type: bard
+      display: 'Section Heading'
+      sets:
+        span_text:
+          display: 'Span Text'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: span_text
+                  field:
+                    type: text
+                    display: 'Span Text'
+            heading_label:
+              display: 'Heading Label'
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label

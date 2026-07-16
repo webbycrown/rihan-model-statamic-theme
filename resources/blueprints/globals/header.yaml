@@ -1,0 +1,26 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: header_logo
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: 'Header Logo'
+          -
+            import: social_icons
+          -
+            handle: button_label
+            field:
+              type: text
+              display: 'Button Label'
+          -
+            handle: button_url
+            field:
+              type: link
+              display: 'Button Url'

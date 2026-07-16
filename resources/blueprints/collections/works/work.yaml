@@ -1,0 +1,89 @@
+title: Work
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              display: Title
+          -
+            handle: image
+            field:
+              max_files: 1
+              min_files: 1
+              container: assets
+              type: assets
+              display: Image
+          -
+            handle: url
+            field:
+              type: link
+              display: Url
+      -
+        display: 'Work Details'
+        fields:
+          -
+            import: all_page_builder
+          -
+            handle: heading
+            field:
+              type: text
+              display: Heading
+          -
+            handle: description
+            field:
+              type: text
+              display: Description
+          -
+            handle: gallery
+            field:
+              max_files: 8
+              container: assets
+              type: assets
+              display: Gallery
+          -
+            handle: short_information
+            field:
+              type: replicator
+              display: 'Short Information'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: grid_field
+                          field:
+                            type: grid
+                            display: 'Grid Field'
+                            fields:
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Title
+                              -
+                                handle: information
+                                field:
+                                  type: text
+                                  display: Information
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
