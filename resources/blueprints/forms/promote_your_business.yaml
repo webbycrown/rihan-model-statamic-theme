@@ -49,19 +49,22 @@ tabs:
               options:
                 -
                   key: '#'
-                  value: 'How Do you Want?'
+                  value: 'Select Project Type'
                 -
-                  key: Massa
-                  value: 'Massa placerat duis'
+                  key: commercial_campaign
+                  value: 'Commercial Campaign'
                 -
-                  key: Sodales
-                  value: 'Sodales neque sodales ut etiam'
+                  key: editorial_shoot
+                  value: 'Editorial Shoot'
                 -
-                  key: Vitae
-                  value: 'Vitae tempus quam pellentesque nec nam'
-              placeholder: 'How Do you Want?'
-              default: 'How Do you Want?'
+                  key: runway_presentation
+                  value: 'Runway Presentation'
+                -
+                  key: brand_ambassadorship
+                  value: 'Brand Ambassadorship'
+              placeholder: 'Select Project Type'
+              default: 'Select Project Type'
               type: select
-              display: Description
+              display: 'Project Type'
               validate:
                 - required

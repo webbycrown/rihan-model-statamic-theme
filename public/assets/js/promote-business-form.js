@@ -74,7 +74,8 @@ $(document).ready(function () {
                         form.reset();
                         setTimeout(function () {
                             $("#form-success").addClass("hidden");
-                        }, 5000);
+                            $.magnificPopup.close();
+                        }, 3000);
                     }
                 },
                 error: function (xhr) {

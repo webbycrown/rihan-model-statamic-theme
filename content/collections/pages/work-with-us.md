@@ -7,8 +7,8 @@ template: work-with-us
 page_builder:
   -
     id: mrk7wv8k
-    hero_section_title: 'work with us'
-    hero_section_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a liquip ex ea commodo consequat. Duis aute irure dolor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.'
+    hero_section_title: 'Work With Us'
+    hero_section_description: 'Open to editorial, commercial, brand ambassador, and campaign projects internationally. Whether you are a photographer, creative director, stylist, or brand — this is where a new collaboration begins. Review the portfolio and get in touch.'
     type: hero_section
     enabled: true
   -
@@ -32,7 +32,7 @@ page_builder:
     enabled: true
   -
     id: mrk7xzm3
-    title: 'Model Details:'
+    title: 'Model Profile'
     elements:
       -
         id: mrk7y77n
@@ -44,49 +44,49 @@ page_builder:
           -
             id: mrk7y8n1
             title: 'Height:'
-            information: '5 Feet 5 Inches'
+            information: '5 ft 9 in (175 cm)'
           -
             id: mrk7y992
             title: 'Weight:'
-            information: '56 Kg'
+            information: '55 kg (121 lbs)'
           -
             id: mrk7y9nh
             title: 'Chest:'
-            information: '35 Inches'
+            information: '84 cm (33")'
           -
             id: mrk7ya3h
             title: 'Waist:'
-            information: '26 Inches'
+            information: '60 cm (23.5")'
           -
             id: mrk7yagt
             title: 'Butt:'
-            information: '37 Inches'
+            information: '90 cm (35.5")'
           -
             id: mrk7yavh
             title: 'Eye Colour:'
-            information: 'Brown - Light'
+            information: 'Hazel Green'
           -
             id: mrk7ybwl
             title: 'Hair Type:'
-            information: Brown
+            information: 'Dark Brown, Natural Wave'
           -
             id: mrk7ycet
             title: 'Assignment Fees:'
-            information: '30000 - 50000 Per Day'
+            information: 'Upon request — contact agency'
         type: title_and_info
         enabled: true
     type: sections
     enabled: true
   -
     id: mrk829id
-    title: About
+    title: Profile
     elements:
       -
         id: mrk82d8j
         paragraph:
           -
             id: mrk82ea3
-            new_paragraph: "Ira Pavlova is one of the most successful models from Russia, conquering the international fashion market in Europe, Asia and America. Ira has had a dazzling career, being published in Elle, Vogue, Tatler, L'officiel, Nylon and Harper's Bazaar in two successive months. The way she is posing for editorial magazines makes images striking, inspiring and unrepeatable."
+            new_paragraph: 'Rihan Asaya has built her career at the intersection of fashion, art, and commercial storytelling. With over eight years in front of the lens, she has developed an instinctive understanding of light, movement, and expression that translates into powerful imagery regardless of the creative brief. Her work spans luxury editorials, international advertising campaigns, and runway appearances at fashion weeks in Milan, Paris, and Berlin.'
             type: new_set
             enabled: true
         type: paragraphs
@@ -95,7 +95,7 @@ page_builder:
     enabled: true
   -
     id: mrk82n9v
-    title: Videos
+    title: Showreel
     elements:
       -
         id: mrk82sab
@@ -108,19 +108,19 @@ page_builder:
     enabled: true
   -
     id: mrk841rf
-    title: Experience
+    title: 'Professional Summary'
     elements:
       -
         id: mrk845be
         paragraph:
           -
             id: mrk846au
-            new_paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
+            new_paragraph: 'Rihan has worked with photographers across 14 countries, appeared in print and digital campaigns for global consumer brands, and walked the runway for independent and established designers across multiple seasons. Her editorial credits span seven international magazine markets.'
             type: new_set
             enabled: true
           -
             id: mrk8476d
-            new_paragraph: 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.'
+            new_paragraph: 'She works with a trusted network of agents, stylists, and photographers who understand her visual language. All project enquiries are handled through her agency representatives in Germany and Spain. She is open to test shoots with established photographers by arrangement.'
             type: new_set
             enabled: true
         type: paragraphs
@@ -136,7 +136,7 @@ page_builder:
             enabled: true
           -
             id: mrk8epfu
-            button_label: 'Personal Interests'
+            button_label: 'Request a Booking'
             button_class: all-btn
             type: new_set
             enabled: true

@@ -10,7 +10,7 @@ page_builder:
   -
     id: mrgar1qz
     hero_section_title: Press
-    hero_section_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.'
+    hero_section_description: 'Featured in leading fashion and lifestyle publications across Europe, Asia, and the Americas. From cover stories to editorial spreads, each press appearance documents a distinct chapter in an ongoing conversation between Rihan Asaya and the global fashion media.'
     type: hero_section
     enabled: true
 ---

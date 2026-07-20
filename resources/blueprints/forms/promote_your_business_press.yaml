@@ -45,28 +45,28 @@ tabs:
             field:
               options:
                 -
-                  key: modelling_assignment
-                  value: 'Modelling Assignment'
+                  key: editorial_spread
+                  value: 'Editorial Spread'
                 -
-                  key: movie_role
-                  value: 'Movie Role'
+                  key: commercial_campaign
+                  value: 'Commercial Campaign'
                 -
-                  key: tv_serial_role
-                  value: 'TV Serial Role'
+                  key: runway_presentation
+                  value: 'Runway Presentation'
                 -
-                  key: magazine_ad
-                  value: 'Magazine Ad'
+                  key: brand_ambassadorship
+                  value: 'Brand Ambassadorship'
                 -
-                  key: event_management
-                  value: 'Event Management'
+                  key: event_appearance
+                  value: 'Event Appearance'
                 -
-                  key: guest_appearance
-                  value: 'Guest Appearance'
+                  key: digital_collaboration
+                  value: 'Digital / Social Collaboration'
               default:
-                - 'Modelling Assignment'
-                - modelling_assignment
+                - 'Editorial Spread'
+                - editorial_spread
               type: checkboxes
-              display: Role
+              display: 'Project Category'
           -
             handle: budget
             field:
@@ -78,7 +78,7 @@ tabs:
           -
             handle: brief_enquiry
             field:
-              placeholder: 'Brief Enquiry : (Max 300 words)'
+              placeholder: 'Brief Enquiry'
               type: textarea
               display: 'Brief Enquiry'
               validate:

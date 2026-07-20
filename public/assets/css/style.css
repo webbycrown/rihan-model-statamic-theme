@@ -3388,7 +3388,7 @@ input[type="checkbox"]:before {
 }
 
 
-/* Home page only */
+/* Home page Social icons */
 .home-page .header .header-social i {
     color: #fff;
     transition: color .3s ease;
@@ -3398,35 +3398,46 @@ input[type="checkbox"]:before {
     color: #000;
 }
 
-/* preloader */
-.preloader-inner {
-    position: relative;
+/* Mobile menu opened */
+.home-page .header .mobile-toggle.active ~ .mobile-nav .header-social i {
+    color: #000;
 }
 
+/* Preloader */
+.preloader-inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Light Logo */
 .logo-light {
-    width: 10%;
+    width: clamp(140px, 20vw, 320px);
+    height: auto;
     display: block;
     filter: brightness(2);
     opacity: 0.5;
 }
 
-/* Dark image starts hidden */
+/* Dark Logo */
 .logo-dark {
-    width: 10%;
+    width: clamp(140px, 20vw, 320px);
+    height: auto;
     position: absolute;
     top: 0;
     left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
+
     clip-path: inset(100% 0 0 0);
     animation: darkReveal 2s ease forwards;
-    transform: translateX(-50%);
 }
 
 @keyframes darkReveal {
     from {
         clip-path: inset(100% 0 0 0);
     }
-
     to {
         clip-path: inset(0 0 0 0);
     }

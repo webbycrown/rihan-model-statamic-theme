@@ -9,8 +9,8 @@ template: books
 page_builder:
   -
     id: mreusce1
-    hero_section_title: BOOK
-    hero_section_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.'
+    hero_section_title: Portfolio Book
+    hero_section_description: 'A comprehensive visual record of Rihan Asaya’s work across fashion, beauty, commercial, and editorial categories. Each spread captures a different facet of her range — from structured luxury campaigns to raw, expressive editorial shoots.'
     type: hero_section
     enabled: true
   -
@@ -24,39 +24,39 @@ page_builder:
       -
         id: mrev95hx
         image: img/book-img-2.png
-        title: 'Cras pulvinar  mattis nunc'
+        title: 'ELLE — Milan Editorial'
       -
         id: mrev9e4f
         image: img/book-img-3.png
-        title: 'Quis auctor elit sed'
+        title: 'L’Officiel — Berlin Season'
       -
         id: mrev9jz3
         image: img/book-img-4.png
-        title: 'Mauris commodo quis imperdiet'
+        title: 'Nylon — Beauty Campaign'
       -
         id: mrev9t0n
         image: img/book-img-5.png
-        title: 'Faucibus pulvinar elementum'
+        title: 'Tatler — Lifestyle Feature'
       -
         id: mrev9tk6
         image: img/book-img-6.png
-        title: 'Lacus vestibulum sed arcu'
+        title: 'GQ — Commercial Story'
       -
         id: mrev9txr
         image: img/book-img-7.png
-        title: 'non odio euismod'
+        title: 'Madame Figaro — Cover'
       -
         id: mrevaf9z
         image: img/book-img-8.png
-        title: 'Donec enim diam / VOGUE'
+        title: 'VOGUE — Spring Collection'
       -
         id: mrevag0e
         image: img/book-img-9.png
-        title: 'Elit at imperdiet dui'
+        title: 'Vanity Fair — Portrait Session'
       -
         id: mrevagwe
         image: img/book-img-10.png
-        title: 'Ornare aenean euismod'
+        title: 'AnOther Magazine — Agency Spread'
     type: gears_section
     enabled: true
 ---

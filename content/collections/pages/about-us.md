@@ -8,7 +8,7 @@ page_builder:
   -
     id: mrekktn0
     hero_section_title: About
-    hero_section_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.'
+    hero_section_description: 'Rihan Asaya is a fashion and editorial model whose work has taken her across three continents. With credits in international magazines, luxury brand campaigns, and runway shows in Milan and Paris, she has built a reputation for precision, adaptability, and quiet authority in front of the lens.'
     type: hero_section
     enabled: true
   -
@@ -20,21 +20,21 @@ page_builder:
           id: mrercmw7
           values:
             type: heading_label
-            label: 'Nisl condimentum id venenatis'
+            label: 'A portfolio shaped by intention,'
       -
         type: set
         attrs:
           id: mrepsnlp
           values:
             type: new_set
-            span_text: 'a condimentum Tellus cras adipiscing enim eu turpis'
+            span_text: 'not circumstance.'
       -
         type: set
         attrs:
           id: mrercc3b
           values:
             type: heading_label
-            label: 'egestas pretium aenean.'
+            label: 'Every frame is a creative decision.'
     section_description:
       -
         type: paragraph
@@ -43,7 +43,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            text: 'Rihan began her career in commercial fashion before transitioning into high-end editorial work, where her ability to communicate mood, character, and narrative through stillness set her apart from the outset.'
       -
         type: paragraph
         attrs:
@@ -51,7 +51,7 @@ page_builder:
         content:
           -
             type: text
-            text: 'Morbi quis commodo odio aenean sed adipiscing diam donec. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Eu turpis egestas pretium aenean pharetra. Ridiculus mus mauris vitae ultricies leo integer. Diam maecenas ultricies mi eget mauris pharetra et ultrices.'
+            text: 'Over the past eight years she has collaborated with photographers, stylists, and creative directors across Germany, Spain, the UAE, and South Korea. Her editorial credits include features in regional editions of Elle, HarperBazaar, and Vogue, alongside campaigns for European fashion houses and independent luxury labels.'
       -
         type: paragraph
         attrs:
@@ -59,13 +59,13 @@ page_builder:
         content:
           -
             type: text
-            text: 'Sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Tempor orci eu lobort is elementum nibh. At imperdiet dui accumsan sit. Enim praesent elementum facilisis leo vel. Morbi quis commodo odio aenean sed adipiscing diam donec. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Eu turpis egestas pretium aenean pharetra. Ridiculus mus mauris vitae ultricies leo integer. Diam maecenas ultricies mi eget mauris pharetra et ultrices.'
+            text: 'Rihan approaches each booking with the same level of preparation — thorough communication with the creative team, a deep understanding of the brand identity, and a commitment to delivering images that tell a complete visual story. She is equally at home in beauty close-ups, full-length runway looks, and lifestyle campaigns.'
     section_image: img/about-circle.png
     type: about_page_section
     enabled: true
   -
     id: mrermjdi
-    gallery_section_heading: 'Eu mi bibendum neque egestas Eget mi proin sed libero enim. Sed euismod nisi'
+    gallery_section_heading: 'Selected editorial and campaign work across fashion, beauty, and lifestyle.'
     gallery_images:
       - img/about-gallery-1.jpg
       - img/about-gallery-2.jpg
@@ -80,7 +80,7 @@ page_builder:
     blocks:
       -
         id: mresp2zu
-        block_title: 'Faucibus a pellentesque sit amet'
+        block_title: 'Training & Methodology'
         block_content:
           -
             type: paragraph
@@ -89,7 +89,7 @@ page_builder:
             content:
               -
                 type: text
-                text: 'Cursus in hac habitasse platea dictumst quisque. Nulla malesuada pellentesque elit eget. Odio euismod lacinia at quis. Fermentum posuere urna nec tincidunt praesent. Purus sit amet volutpat consequat mauris. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Aliquam ultrices sagittis orci a scelerisque purus semper. Suspendisse in est ante in nibh mauris cursus.'
+                text: 'Rihan trained formally at the Berlin Academy of Fashion Performance and later completed runway coaching under senior bookers at a top-tier Milan agency. Her movement work extends into contemporary dance, which has influenced the way she interprets structure and negative space in fashion photography.'
           -
             type: paragraph
             attrs:
@@ -97,12 +97,12 @@ page_builder:
             content:
               -
                 type: text
-                text: 'Ut lectus arcu bibendum at varius vel. Mi eget mauris pharetra et ultrices neque. Consectetur a erat nam at lectus urna duis convallis. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque.'
+                text: 'She maintains strong working relationships with agencies in three countries and is available for international bookings year-round. Her professionalism on set — punctuality, communication, and creative collaboration — is consistently noted by clients.'
         type: new_set
         enabled: true
       -
         id: mrespk16
-        block_title: 'Sed euismod nisi porta lorem maecenas'
+        block_title: 'Global Experience & Bookings'
         block_content:
           -
             type: paragraph
@@ -111,15 +111,15 @@ page_builder:
             content:
               -
                 type: text
-                text: 'Eu mi bibendum neque egestas. Eget mi proin sed libero enim. Sed euismod nisi porta lorem. Aliquam id diam maecenas ultricies mi eget mauris pharetra et. Tincidunt arcu non sodales neque sodales ut etiam. Mattis enim ut tellus elementum sagittis vitae et. Varius quam quisque id diam vel quam. Pretium viverra suspendisse potenti nullam ac tortor. Eu nisl nunc mi ipsum faucibus vitae. Senectus et netus et malesuada fames ac turpis. Neqtortor. Eu nisl nunc mi ipsum faucibus vitae. Senectus et netus et malesuada fames ac turpis. Neue laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt. Cras adipiscing enim eu turpis. Gravida rutrum quisque non tellus. Integer feugiat scelerisque varius morbi enim nunc faucibus.'
+                text: 'Rihan has worked on location across Europe, Asia, and the Middle East, adapting to the requirements of each creative brief — from studio precision work to outdoor lifestyle campaigns in challenging conditions. She holds a current working visa for six markets and is represented in Germany and Spain.'
         type: new_set
         enabled: true
     type: block_title_and_content
     enabled: true
   -
     id: mretzold
-    heading: Follow
-    user_name: '_@_RIHAN ASAYA'
+    heading: Follow on
+    user_name: '@rihan.asaya'
     url: 'https://www.instagram.com'
     type: instagram_section
     enabled: true

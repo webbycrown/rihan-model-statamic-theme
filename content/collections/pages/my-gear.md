@@ -9,8 +9,8 @@ updated_at: 1783746232
 page_builder:
   -
     id: mrfwfrwd
-    hero_section_title: 'MY GEAR'
-    hero_section_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.'
+    hero_section_title: 'Essentials & Toolkit'
+    hero_section_description: 'A curated selection of lifestyle, beauty, and wellness essentials that support a professional modeling schedule. These are the trusted products and tools Rihan Asaya relies on for travel, set preparation, and daily maintenance.'
     type: hero_section
     enabled: true
 ---

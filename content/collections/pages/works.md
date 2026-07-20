@@ -8,7 +8,7 @@ page_builder:
   -
     id: mrg2d5cw
     hero_section_title: Work
-    hero_section_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.'
+    hero_section_description: 'A curated selection of editorial, commercial, and runway projects. Each campaign represents a distinct collaboration — between the brand, the creative team, and the frame. Browse the full portfolio to explore the range and depth of the work.'
     type: hero_section
     enabled: true
 updated_by: d1aa3c3c-536f-43ea-936e-30216d67d46f

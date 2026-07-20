@@ -20,8 +20,8 @@
         <div class="preloader-inner">
             {{ if preloader:image }}
                 {{ preloader:image }}
-                    <img src="{{ url }}" alt="preloader" class="logo-light" height="auto" width="50%">
-                    <img src="{{ url }}" alt="preloader" class="logo-dark" height="auto" width="50%">
+                    <img src="{{ url }}" alt="preloader" class="logo-light" >
+                    <img src="{{ url }}" alt="preloader" class="logo-dark" >
                 {{ /preloader:image }}
             {{ /if }}
         </div>
@@ -32,15 +32,12 @@
         {{# Start header #}}
         {{ partial:partial/header }}
         {{# End header #}}
-
         {{# Start Content #}}
         {{ template_content }}
         {{# End Content #}}
-
         {{# Start footer #}}
         {{ partial:partial/footer }}
         {{# End footer #}}
-        
     </div>
 
     {{ partial:partial/scripts }}
