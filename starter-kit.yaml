@@ -8,7 +8,6 @@ export_paths:
   - resources/users
   - resources/views
   - public/assets
-  - public/build
   - storage/forms
   - package.json
   - vite.config.js
