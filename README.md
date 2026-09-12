@@ -2,6 +2,9 @@
 
 Rihan Model is a premium Statamic Starter Kit built for photographers, models, creators, influencers, and personal brands. It provides a clean, modern portfolio experience with flexible page builder sections, reusable content collections, and business inquiry forms, making it easy to showcase your work, press coverage, books, and professional gear.
 
+**Live demo:** https://rihan-model-statamic.webbydemo.in/  
+Control Panel: `/cp` — `admin@example.com` / `password`
+
 ## Pages of Rihan Model
 
 The Rihan Model starter kit includes a complete set of pages for building a professional portfolio website:
@@ -44,7 +47,7 @@ Organize your content using built-in Statamic collections:
 
 ## Installation
 
-Follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit) to get started with Yoga.
+Follow the [Starter Kit installation instructions](https://statamic.dev/starter-kits/installing-a-starter-kit) to get started with Rihan Model.
 Make sure you're running **Statamic 5.x** for compatibility.
 
 ### Installing into an existing site
@@ -55,7 +58,7 @@ php please starter-kit:install webbycrown/rihan-model-statamic-theme
 
 ### Installing via the Statamic CLI Tool
 
-If you have the [Statamic CLI Tool](https://github.com/statamic/cli) installed, create a new Statamic installation with Yoga in one command:
+If you have the [Statamic CLI Tool](https://github.com/statamic/cli) installed, create a new Statamic installation with Rihan Model in one command:
 
 ```bash
 statamic new my-site webbycrown/rihan-model-statamic-theme
