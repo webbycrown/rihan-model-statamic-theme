@@ -2,9 +2,6 @@
 
 Rihan Model is a premium Statamic Starter Kit built for photographers, models, creators, influencers, and personal brands. It provides a clean, modern portfolio experience with flexible page builder sections, reusable content collections, and business inquiry forms, making it easy to showcase your work, press coverage, books, and professional gear.
 
-**Live demo:** https://rihan-model-statamic.webbydemo.in/  
-Control Panel: `/cp` — `admin@example.com` / `password`
-
 ## Pages of Rihan Model
 
 The Rihan Model starter kit includes a complete set of pages for building a professional portfolio website:
@@ -78,3 +75,5 @@ statamic new my-site webbycrown/rihan-model-statamic-theme
 <div align="center">
 <strong>Made with ❤️ by <a href="https://www.webbycrown.com/custom-statamic-development-services-company/">WebbyCrown Solutions</a></strong>
 </div>
+
+See [THIRD_PARTY.md](THIRD_PARTY.md) for bundled front-end libraries, fonts, and sample imagery licences.

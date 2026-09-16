@@ -3,7 +3,7 @@
   "type": "statamic-starter-kit",
   "description": "A Statamic starter kit for information sites.",
   "require": {
-    "statamic/cms": "*"
+    "statamic/cms": "^5.0"
   },
   "extra": {
     "statamic": {
